@@ -1,0 +1,1723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5D79113-2E71-4F0A-BFD1-D53B39AFB7C6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Centre_D_affaire</RootNamespace>
+    <AssemblyName>Centre D%27affaire</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Charts.WinForms, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.1\lib\Bunifu.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Dataviz.WinForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Dataviz.WinForms.2.1.6\lib\Bunifu.Dataviz.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.7.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.7\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Guna.UI2">
+      <HintPath>..\packages\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <HintPath>..\packages\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\aa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\aa.Designer.cs">
+      <DependentUpon>aa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dgv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dgv.Designer.cs">
+      <DependentUpon>dgv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\Catalogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\Catalogue.Designer.cs">
+      <DependentUpon>Catalogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\CHOIX.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsArticle.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormDTldemande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormDTldemande.Designer.cs">
+      <DependentUpon>FormDTldemande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\ListeCategorie.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsDemande.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsDetailLivraison.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsDetail_Demande.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsEmploye.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsFacture.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsListe.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsLivraison.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsProfil.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsFournisseur.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsCommande.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsDepartement.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\ClsUnite.cs" />
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\Comerce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\Comerce.Designer.cs">
+      <DependentUpon>Comerce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\General.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\General.Designer.cs">
+      <DependentUpon>General.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\.Designer.cs">
+      <DependentUpon>.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormPdir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormPdir.Designer.cs">
+      <DependentUpon>FormPdir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormPres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormPres.Designer.cs">
+      <DependentUpon>FormPres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormResDemande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\FormResDemande.Designer.cs">
+      <DependentUpon>FormResDemande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\Formulaire1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\Formulaire1.Designer.cs">
+      <DependentUpon>Formulaire1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\saisie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\saisie.Designer.cs">
+      <DependentUpon>saisie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADO.cs" />
+    <Compile Include="Catalogue_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalogue_User.Designer.cs">
+      <DependentUpon>Catalogue_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\clsGCR.cs" />
+    <Compile Include="GestionCafeRestaurant\frmGCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\frmGCR.Designer.cs">
+      <DependentUpon>frmGCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\Activité.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\Activité.Designer.cs">
+      <DependentUpon>Activité.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\BinaryFormatter.cs" />
+    <Compile Include="GestionCreche\clsEnfant.cs" />
+    <Compile Include="GestionCreche\clsFacture.cs" />
+    <Compile Include="GestionCreche\clsGroupe.cs" />
+    <Compile Include="GestionCreche\clsListe.cs" />
+    <Compile Include="GestionCreche\ClsParant.cs" />
+    <Compile Include="GestionCreche\ClsPersonnel.cs" />
+    <Compile Include="GestionCreche\clsResponsable.cs" />
+    <Compile Include="GestionCreche\FrmAccul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\FrmAccul.Designer.cs">
+      <DependentUpon>FrmAccul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\frmCatalogue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\frmCatalogue.Designer.cs">
+      <DependentUpon>frmCatalogue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\frmInscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\frmInscription.Designer.cs">
+      <DependentUpon>frmInscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\Dejeuner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\Dejeuner.Designer.cs">
+      <DependentUpon>Dejeuner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\FrmPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\FrmPersonnel.Designer.cs">
+      <DependentUpon>FrmPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\Jeux.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionParking\Client.cs" />
+    <Compile Include="GestionParking\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\Jeux.Designer.cs">
+      <DependentUpon>Jeux.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\Pdejeuner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\Pdejeuner.Designer.cs">
+      <DependentUpon>Pdejeuner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\Gouter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\Gouter.Designer.cs">
+      <DependentUpon>Gouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCreche\Sport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCreche\Sport.Designer.cs">
+      <DependentUpon>Sport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParking\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParking\dgvCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParking\dgvCar.Designer.cs">
+      <DependentUpon>dgvCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParking\dgvSpot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParking\dgvSpot.Designer.cs">
+      <DependentUpon>dgvSpot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParking\LoadingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParking\LoadingPage.Designer.cs">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParking\Login-SignUp-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionParking\Login-SignUp-Form.Designer.cs">
+      <DependentUpon>Login-SignUp-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionParking\info.cs" />
+    <Compile Include="GestionPersonnel\ClsCompteBancaire.cs" />
+    <Compile Include="GestionPersonnel\ClsDepartement.cs" />
+    <Compile Include="GestionPersonnel\clsEmploye.cs" />
+    <Compile Include="GestionPersonnel\clsEventHandler.cs" />
+    <Compile Include="GestionPersonnel\clsExceptions.cs" />
+    <Compile Include="GestionPersonnel\clsPoste.cs" />
+    <Compile Include="GestionPersonnel\Congé.cs" />
+    <Compile Include="GestionPersonnel\CustomControls\frmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\frmAlert.Designer.cs">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\Functions.cs" />
+    <Compile Include="GestionPersonnel\CustomControls\UCAjoutPoste.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCAjoutPoste.Designer.cs">
+      <DependentUpon>UCAjoutPoste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCAjoutDepartement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCAjoutDepartement.Designer.cs">
+      <DependentUpon>UCAjoutDepartement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCAjoutEmploye.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCAjoutEmploye.Designer.cs">
+      <DependentUpon>UCAjoutEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCDashboard.Designer.cs">
+      <DependentUpon>UCDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCEmployes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCEmployes.Designer.cs">
+      <DependentUpon>UCEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeDemandesEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeDemandesEmp.Designer.cs">
+      <DependentUpon>UCListeDemandesEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeDemandes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeDemandes.Designer.cs">
+      <DependentUpon>UCListeDemandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeDepartement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeDepartement.Designer.cs">
+      <DependentUpon>UCListeDepartement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeEmployes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListeEmployes.Designer.cs">
+      <DependentUpon>UCListeEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListePoste.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCListePoste.Designer.cs">
+      <DependentUpon>UCListePoste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCModifPoste.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCModifPoste.Designer.cs">
+      <DependentUpon>UCModifPoste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCModifDepartement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCModifDepartement.Designer.cs">
+      <DependentUpon>UCModifDepartement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCNotif.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCNotif.Designer.cs">
+      <DependentUpon>UCNotif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCProfil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\UCProfil.Designer.cs">
+      <DependentUpon>UCProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\_UCDemandesEmp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\_UCDemandesEmp.Designer.cs">
+      <DependentUpon>_UCDemandesEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\_UCDemandes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\_UCDemandes.Designer.cs">
+      <DependentUpon>_UCDemandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\_UCDepartements.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\CustomControls\_UCDepartements.Designer.cs">
+      <DependentUpon>_UCDepartements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\Demission.cs" />
+    <Compile Include="GestionPersonnel\FrmCongée.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmCongée.Designer.cs">
+      <DependentUpon>FrmCongée.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmDemande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmDemande.Designer.cs">
+      <DependentUpon>FrmDemande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmDemission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmDemission.Designer.cs">
+      <DependentUpon>FrmDemission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\frmPrincipal_Employe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\frmPrincipal_Employe.Designer.cs">
+      <DependentUpon>frmPrincipal_Employe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\frmPrincipal_Directeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\frmPrincipal_Directeur.Designer.cs">
+      <DependentUpon>frmPrincipal_Directeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\frmGPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\frmGPersonnel.Designer.cs">
+      <DependentUpon>frmGPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmAddGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmPaiement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionPersonnel\FrmPaiement.Designer.cs">
+      <DependentUpon>FrmPaiement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionPersonnel\list.cs" />
+    <Compile Include="GestionSalleDeJeux\FrmAddGame.Designer.cs">
+      <DependentUpon>FrmAddGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\ClassInterface.cs" />
+    <Compile Include="GestionSalleDeSport\Equipment.cs" />
+    <Compile Include="GestionSalleDeSport\FormGestionnaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormGestionnaire.Designer.cs">
+      <DependentUpon>FormGestionnaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormGridMemebre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormGridMemebre.Designer.cs">
+      <DependentUpon>FormGridMemebre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\Listes.cs" />
+    <Compile Include="GestionSalleDeSport\Entraineur.cs" />
+    <Compile Include="GestionSalleDeSport\FormAccueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormAccueil.Designer.cs">
+      <DependentUpon>FormAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\clsArcArdStreet.cs" />
+    <Compile Include="GestionSalleDeJeux\clsBillard.cs" />
+    <Compile Include="GestionSalleDeJeux\clsBabyFoot.cs" />
+    <Compile Include="GestionSalleDeJeux\clsPs4.cs" />
+    <Compile Include="GestionSalleDeJeux\frmAddGameAndEmployer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\frmAddGameAndEmployer.Designer.cs">
+      <DependentUpon>frmAddGameAndEmployer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmARCARDE STREET.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmARCARDE STREET.Designer.cs">
+      <DependentUpon>FrmARCARDE STREET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmBabyFoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmBabyFoot.Designer.cs">
+      <DependentUpon>FrmBabyFoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\clsEmployersSDJ.cs" />
+    <Compile Include="GestionSalleDeJeux\ClsListeSDJ.cs" />
+    <Compile Include="GestionSalleDeJeux\FrmBillard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmBillard.Designer.cs">
+      <DependentUpon>FrmBillard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmConnection.Designer.cs">
+      <DependentUpon>FrmConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmInfoGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmInfoGame.Designer.cs">
+      <DependentUpon>FrmInfoGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmNewMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmNewMember.Designer.cs">
+      <DependentUpon>FrmNewMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmSupport.Designer.cs">
+      <DependentUpon>FrmSupport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmMENU1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmMENU1.Designer.cs">
+      <DependentUpon>FrmMENU1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\ClsOccupationJ.cs" />
+    <Compile Include="GestionSalleDeJeux\FrmPS4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\FrmPS4.Designer.cs">
+      <DependentUpon>FrmPS4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeJeux\ClsSalleDeJeux.cs" />
+    <Compile Include="GestionSalleDeJeux\clsJeux.cs" />
+    <Compile Include="GestionSalleDeSport\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\FormSignIn.Designer.cs">
+      <DependentUpon>FormSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\Membre.cs" />
+    <Compile Include="GestionSalleDeSport\Package.cs" />
+    <Compile Include="GestionSalleDeSport\Paiement.cs" />
+    <Compile Include="GestionSalleDeSport\Personne.cs" />
+    <Compile Include="GestionSalleDeSport\Produit.cs" />
+    <Compile Include="GestionSalleDeSport\uccPresence.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\uccPresence.Designer.cs">
+      <DependentUpon>uccPresence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgestionEntraineur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgestionEntraineur.Designer.cs">
+      <DependentUpon>UCgestionEntraineur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgestionMemebre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgestionMemebre.Designer.cs">
+      <DependentUpon>UCgestionMemebre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgestionPackage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgestionPackage.Designer.cs">
+      <DependentUpon>UCgestionPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UcGestionVendeur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UcGestionVendeur.Designer.cs">
+      <DependentUpon>UcGestionVendeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgetionAchats.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCgetionAchats.Designer.cs">
+      <DependentUpon>UCgetionAchats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCGestionPaiment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UCGestionPaiment.Designer.cs">
+      <DependentUpon>UCGestionPaiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionSalleDeSport\Utilisateur.cs" />
+    <Compile Include="GestionSalleDeSport\Vendeur.cs" />
+    <Compile Include="LocationEspacesSalleReunion\AjoutEspace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\AjoutEspace.Designer.cs">
+      <DependentUpon>AjoutEspace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\AjoutLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\AjoutLocation.Designer.cs">
+      <DependentUpon>AjoutLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\ClsFacture.cs" />
+    <Compile Include="LocationEspacesSalleReunion\ClsLocation.cs" />
+    <Compile Include="LocationEspacesSalleReunion\ClsLocataire.cs" />
+    <Compile Include="LocationEspacesSalleReunion\ClsType.cs" />
+    <Compile Include="LocationEspacesSalleReunion\ClsEspaces.cs" />
+    <Compile Include="LocationEspacesSalleReunion\ClsTest.cs" />
+    <Compile Include="LocationEspacesSalleReunion\ArchiveFacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\ArchiveFacture.Designer.cs">
+      <DependentUpon>ArchiveFacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\Facturation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\Facturation.Designer.cs">
+      <DependentUpon>Facturation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="interfaces.cs" />
+    <Compile Include="LocationEspacesSalleReunion\frmLESR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\frmLESR.Designer.cs">
+      <DependentUpon>frmLESR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\ListeFactures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationEspacesSalleReunion\ListeFactures.Designer.cs">
+      <DependentUpon>ListeFactures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchatsLogistiquePatrimoine\Formulaire\LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GestionPersonnel\frmGPersonnel.resx">
+      <DependentUpon>frmGPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\FormAccueil.resx">
+      <DependentUpon>FormAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\FormGestionnaire.resx">
+      <DependentUpon>FormGestionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\FormGridMemebre.resx">
+      <DependentUpon>FormGridMemebre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\FormSignIn.resx">
+      <DependentUpon>FormSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\uccPresence.resx">
+      <DependentUpon>uccPresence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UCgestionEntraineur.resx">
+      <DependentUpon>UCgestionEntraineur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UCgestionMemebre.resx">
+      <DependentUpon>UCgestionMemebre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UCgestionPackage.resx">
+      <DependentUpon>UCgestionPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UcGestionVendeur.resx">
+      <DependentUpon>UcGestionVendeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UCgetionAchats.resx">
+      <DependentUpon>UCgetionAchats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UCGestionPaiment.resx">
+      <DependentUpon>UCGestionPaiment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeSport\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="GestionCafeRestaurant\frmGCR.resx">
+      <DependentUpon>frmGCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\frmAddGameAndEmployer.resx">
+      <DependentUpon>frmAddGameAndEmployer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmAddGame.resx">
+      <DependentUpon>FrmAddGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmARCARDE STREET.resx">
+      <DependentUpon>FrmARCARDE STREET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmBabyFoot.resx">
+      <DependentUpon>FrmBabyFoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmBillard.resx">
+      <DependentUpon>FrmBillard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmConnection.resx">
+      <DependentUpon>FrmConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmInfoGame.resx">
+      <DependentUpon>FrmInfoGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmNewMember.resx">
+      <DependentUpon>FrmNewMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmSupport.resx">
+      <DependentUpon>FrmSupport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmMENU1.resx">
+      <DependentUpon>FrmMENU1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionSalleDeJeux\FrmPS4.resx">
+      <DependentUpon>FrmPS4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationEspacesSalleReunion\AjoutEspace.resx">
+      <DependentUpon>AjoutEspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationEspacesSalleReunion\AjoutLocation.resx">
+      <DependentUpon>AjoutLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationEspacesSalleReunion\ArchiveFacture.resx">
+      <DependentUpon>ArchiveFacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationEspacesSalleReunion\Facturation.resx">
+      <DependentUpon>Facturation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationEspacesSalleReunion\frmLESR.resx">
+      <DependentUpon>frmLESR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationEspacesSalleReunion\ListeFactures.resx">
+      <DependentUpon>ListeFactures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dgv.resx">
+      <DependentUpon>dgv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParking\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParking\dgvCar.resx">
+      <DependentUpon>dgvCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParking\dgvSpot.resx">
+      <DependentUpon>dgvSpot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParking\LoadingPage.resx">
+      <DependentUpon>LoadingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionParking\Login-SignUp-Form.resx">
+      <DependentUpon>Login-SignUp-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_Additems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_Additems.Designer.cs">
+      <DependentUpon>UC_Additems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_CreateNewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_CreateNewUser.Designer.cs">
+      <DependentUpon>UC_CreateNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_PlaceOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_PlaceOrder.Designer.cs">
+      <DependentUpon>UC_PlaceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_RemoveItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_RemoveItem.Designer.cs">
+      <DependentUpon>UC_RemoveItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_UpdateItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_UpdateItems.Designer.cs">
+      <DependentUpon>UC_UpdateItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\AllUserControl\UC_Welcome.Designer.cs">
+      <DependentUpon>UC_Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\Classes\ClsList.cs" />
+    <Compile Include="GestionCafeRestaurant\DGVPrinter.cs" />
+    <Compile Include="GestionCafeRestaurant\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\function.cs" />
+    <Compile Include="GestionCafeRestaurant\PageMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCafeRestaurant\PageMenu.Designer.cs">
+      <DependentUpon>PageMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GestionCafeRestaurant\PageMenu.resx">
+      <DependentUpon>PageMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCafeRestaurant\AllUserControl\UC_Additems.resx">
+      <DependentUpon>UC_Additems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCafeRestaurant\AllUserControl\UC_CreateNewUser.resx">
+      <DependentUpon>UC_CreateNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCafeRestaurant\AllUserControl\UC_PlaceOrder.resx">
+      <DependentUpon>UC_PlaceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCafeRestaurant\AllUserControl\UC_RemoveItem.resx">
+      <DependentUpon>UC_RemoveItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCafeRestaurant\AllUserControl\UC_UpdateItems.resx">
+      <DependentUpon>UC_UpdateItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCafeRestaurant\AllUserControl\UC_Welcome.resx">
+      <DependentUpon>UC_Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCAjoutPoste.resx">
+      <DependentUpon>UCAjoutPoste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\frmAlert.resx">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCListeDemandesEmp.resx">
+      <DependentUpon>UCListeDemandesEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCListeDemandes.resx">
+      <DependentUpon>UCListeDemandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCModifPoste.resx">
+      <DependentUpon>UCModifPoste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCModifDepartement.resx">
+      <DependentUpon>UCModifDepartement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCNotif.resx">
+      <DependentUpon>UCNotif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\_UCDemandesEmp.resx">
+      <DependentUpon>_UCDemandesEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\_UCDemandes.resx">
+      <DependentUpon>_UCDemandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\FrmCongée.resx">
+      <DependentUpon>FrmCongée.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\FrmDemande.resx">
+      <DependentUpon>FrmDemande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\FrmDemission.resx">
+      <DependentUpon>FrmDemission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCAjoutDepartement.resx">
+      <DependentUpon>UCAjoutDepartement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCAjoutEmploye.resx">
+      <DependentUpon>UCAjoutEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCDashboard.resx">
+      <DependentUpon>UCDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCEmployes.resx">
+      <DependentUpon>UCEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCListeDepartement.resx">
+      <DependentUpon>UCListeDepartement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCListeEmployes.resx">
+      <DependentUpon>UCListeEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCListePoste.resx">
+      <DependentUpon>UCListePoste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\UCProfil.resx">
+      <DependentUpon>UCProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\CustomControls\_UCDepartements.resx">
+      <DependentUpon>_UCDepartements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\frmPrincipal_Employe.resx">
+      <DependentUpon>frmPrincipal_Employe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\frmPrincipal_Directeur.resx">
+      <DependentUpon>frmPrincipal_Directeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionPersonnel\FrmPaiement.resx">
+      <DependentUpon>FrmPaiement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\Catalogue.resx">
+      <DependentUpon>Catalogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\Comerce.resx">
+      <DependentUpon>Comerce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\FormDTldemande.resx">
+      <DependentUpon>FormDTldemande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\General.resx">
+      <DependentUpon>General.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\.resx">
+      <DependentUpon>.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\FormPdir.resx">
+      <DependentUpon>FormPdir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\FormPres.resx">
+      <DependentUpon>FormPres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\FormResDemande.resx">
+      <DependentUpon>FormResDemande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\Formulaire1.resx">
+      <DependentUpon>Formulaire1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\saisie.resx">
+      <DependentUpon>saisie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AchatsLogistiquePatrimoine\Formulaire\LOGIN.resx" />
+    <EmbeddedResource Include="Catalogue_User.resx">
+      <DependentUpon>Catalogue_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\Activité.resx">
+      <DependentUpon>Activité.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\FrmAccul.resx">
+      <DependentUpon>FrmAccul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\frmCatalogue.resx">
+      <DependentUpon>frmCatalogue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\frmInscription.resx">
+      <DependentUpon>frmInscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\Dejeuner.resx">
+      <DependentUpon>Dejeuner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\FrmPersonnel.resx">
+      <DependentUpon>FrmPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\Jeux.resx">
+      <DependentUpon>Jeux.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\Pdejeuner.resx">
+      <DependentUpon>Pdejeuner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\Gouter.resx">
+      <DependentUpon>Gouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCreche\Sport.resx">
+      <DependentUpon>Sport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <!--<None Include="packages.config" />-->
+    <None Include="bin\Debug\Article" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-help-desk-technical-support-symbol-png-download-help-desk-icon-5ab0dcb404fe53.6458065015215402760205.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-online-support-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-home-clip-art-black-home-icon-5ab0be3121a1f5.8709230015215324651378.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\582807-steevy84-istock-456906257.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_home_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_home_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_add_box_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_help_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_play_arrow_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_pause_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_restart_alt_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_restart_alt_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_play_arrow_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_pause_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard-ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard-ball1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-billiards-computer-icons-billiard-balls-eight-ball-8-ball-pool-5accb508721f40.6250710415233651284675.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game-pool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3401193.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3544172.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3205207.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3544115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1865398.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18653981.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_menu_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_menu_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_home_black_24dp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-letter-interface-sign %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-letter-interface-sign %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\care-about-environment %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-information-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engrenage-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engrenage-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-engrenage-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_support_agent_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_support_agent_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_support_agent_black_24dp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1423825.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queue-de-billard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Babyfoot-personnalise-finition-mate-Blackball.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baby-foot-personnalise-sur-mesure-Pure-debuchy-Toulet.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14238251.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baby-foot-personnalise-sur-mesure-Pure-debuchy-Toulet1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Babyfoot-recadré.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\babyfoot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61h8-jBiGgL._AC_SX425_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71b7616dee_50157963_2-noel-console-ps4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52c973cdb6787241d3c7a0360dc7d140.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RepliCade_Street_Fighter_II_Arcade_03_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RepliCade_Street_Fighter_II_Arcade_03_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40-405613_arcade-data-src-classic-arcade-wallpaper-cell-phone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arcade.Fighting.Street-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1588774394_407_Rues-de-Rage-4-est-genial-mais-c39est-autre-chose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\street-fighter-ii-micro-player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aleksei-bachinskii-screenshot004.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a3d9750b15423c43a7321147e9e9bb9a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cabinet-d&amp;#39%3barcade-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regle-jeu-baby-foot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regle-jeu-baby-foot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-street-fighter-v-xbox-360-arcade-controller-playstation-4-playstation-3-playstation-electronics-playstation-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-joystick-controller-stencil-joystick-game-controllers-atari-2600-computer-icons-video-games-electronics-video-game-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apple-arcade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65687.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65687 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7fc6672ddb99cac9c038efcb5f502a76.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-neon-style-game-room-with-console-png-image_2964659.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-neon-style-game-room-with-console-png-image_29646591.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-neon-style-game-room-with-console-png-image_29646592.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neonsigneffects_behance_arcade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-neon-game-zone-with-console-and-triangle-png-image_6030413.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_backspace_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_backspace_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-badge-d%27employé-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1682559.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3999583-middle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3999583-middle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16825591.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16825592.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\162-1627477_number-of-employees-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-icon-png-27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-icon-png-271.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee-icon-png-272.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outline_edit_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_manager_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_minus_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_office_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_pin_80px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_plus_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_unpin_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_add_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_bill_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_calendar_plus_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_new_document_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_organization_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_cancel_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocationEspacesSalleReunion\Resouces\icons8_receipt_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2021-05-25 131013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2021-05-25 1310131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize-login parking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize-login parking1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicsArt_05-25-02.01.07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicsArt_05-25-02.03.55[1].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicsArt_05-25-hhhhhhhhh02.03.55.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicsArt_05-25-02.13.30[1].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resize-login_parking[1].jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgot-password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-icon-trendy-flat-style-260nw-750981196.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\--incoming-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-not-being-used.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicsArt_05-30-07.48.01[1].jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car-sharing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PicsArt_06-17-06.01.19[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_location_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_rounded_left_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online_payment_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cash_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rent_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paypal_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_30px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_multiply_26px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_minus_24px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_add_user_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_denied_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_female_user_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_find_user_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_male_user_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_user_126px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_user_male_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_add_user_male_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_checklist_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_clipboard_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_dashboard_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_denied_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_euro_money_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_female_user_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_find_user_male_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_home_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_male_user_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_minus_24px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_money_bag_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_multiply_26px_41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_user_126px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_user_groups_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_user_male_32px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_settings_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\Fonts\Poppins\Poppins-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\Fonts\Poppins\Poppins-Light.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Liste des departements.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_error_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_info_96px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_key_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_workspace_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GestionPersonnel\Resources\icons8_pencil_drawing_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AchatsLogistiquePatrimoine\arriere-plan-afges-1024x728.jpg" />
+    <None Include="Resources\sallesport.jpg" />
+    <None Include="Resources\close_window_48px.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\WhatsApp Image 2021-07-03 at 12.23.06.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-07-03 at 12.17.51.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-07-03 at 10.31.301.jpeg" />
+    <None Include="Resources\feuille page1.png" />
+    <None Include="Resources\feuille page.png" />
+    <None Include="Resources\WhatsApp Image 2021-07-03 at 10.31.30.jpeg" />
+    <None Include="Resources\WhatsApp Image 2021-07-03 at 10.31.21.jpeg" />
+    <None Include="Resources\signature.png" />
+    <None Include="Resources\dtlDemande.png" />
+    <None Include="Resources\back1.png" />
+    <None Include="Resources\checked_checkbox_50px.png" />
+    <Content Include="Resources\cisco.png" />
+    <None Include="Resources\feuille.jpg" />
+    <None Include="Resources\1384060.png" />
+    <None Include="Resources\Article" />
+    <None Include="Resources\centre-commercial-vide_1127-376.jpg" />
+    <None Include="Resources\1.jpg" />
+    <None Include="Resources\personnel.jpg" />
+    <None Include="Resources\achat.jpg" />
+    <None Include="Resources\location.jpg" />
+    <None Include="Resources\creche.jpg" />
+    <None Include="Resources\parking.jpg" />
+    <None Include="Resources\restau.jpg" />
+    <None Include="Resources\jeux.jpg" />
+    <None Include="Resources\vue-arriere-plan-abstraite-abstraite-interieur-regardant-vers-bureau-vide-portes-entree-mur-rideau-verre-cadre_1339-63701.jpg" />
+    <None Include="Resources\istockphoto-914982712-170667a.jpg" />
+    <None Include="Resources\vue-arriere-plan-abstraite-abstraite-interieur-regardant-vers-bureau-vide-portes-entree-mur-rideau-verre-cadre_1339-6370.jpg" />
+    <None Include="Resources\plateau-table-vide-bois-dessus-arriere-plan-flou_1253-1584.jpg" />
+    <None Include="Resources\caricature-homme-affaires_18591-40638.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\persone1.png" />
+    <None Include="Resources\depositphotos_18595071-stock-photo-light-room.jpg" />
+    <None Include="Resources\3aa9b4f22c3ff9d4435e941af0090dca.jpg" />
+    <None Include="Resources\plan2.jpg" />
+    <None Include="Resources\persone.png" />
+    <None Include="Resources\plan11.jpg" />
+    <None Include="Resources\plan1.jpg" />
+    <None Include="Resources\plan.jpg" />
+    <None Include="Resources\csm_csm-frs-iberia-destinos-rabat_06cdf5682b.jpg" />
+    <None Include="Resources\arriere-plan-afges-1024x728.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AchatsLogistiquePatrimoine\responsableAchat\" />
+    <Folder Include="AchatsLogistiquePatrimoine\usercontrole\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
